@@ -1,0 +1,9 @@
+graph TD
+    A[Création Devis] --> B[Validation Commande]
+    B --> C[Vérification Stock]
+    C --> |Stock Disponible| D[Préparation Commande]
+    C --> |Stock Insuffisant| E[Réapprovisionnement]
+    D --> F[Génération Facture]
+    E --> C
+    F --> G[Suivi Paiement]
+    D --> H[Expédition]
